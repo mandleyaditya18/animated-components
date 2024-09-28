@@ -12,10 +12,12 @@ export function Spinner({
   return (
     <div
       className={styles.wrapper}
-      style={{
-        ["--spinner-size"]: `${size}px`,
-        ["--spinner-color"]: color,
-      }}
+      style={
+        {
+          "--spinner-size": `${size}px`,
+          "--spinner-color": color,
+        } as React.CSSProperties
+      }
     >
       <div className={styles.spinner}>
         {bars.map((_, i) => (
